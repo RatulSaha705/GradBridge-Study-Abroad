@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}GradBridge{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col">
+  <nav class="bg-white border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="/" class="text-xl font-bold text-indigo-700">GradBridge</a>
+      <div class="space-x-4 text-sm font-medium text-slate-600">
+        <a href="/" class="hover:text-indigo-700">Home</a>
+        <a href="/api/health" class="hover:text-indigo-700">API Health</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-6xl mx-auto w-full px-4 py-8 flex-1">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
